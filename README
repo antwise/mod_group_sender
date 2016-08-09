@@ -1,0 +1,18 @@
+ABOUT
+
+This module for ejabberd allow send message to all users of group by using destination as group_name@mod_group_sender.
+
+INSTALL
+    1) In /etc/ejabberd /ejabberd.cfg append mod_group_sender to modules as {modules, [ .... ,{mod_group_sender, []} ]}.
+    2) Copy ebin/mod_group_sender.beam to /usr/lib/ejabberd/ebin
+	3) Reload configuration: ejabberdctl load_config /etc/ejabberd/ejabberd.cfg
+	
+USAGE
+    Send message to all@mod_group_sender:
+	ejabberdctl send_message_chat test@mod_group_sender all@mod_group_sender "Hello from mod_group_sender"
+
+Authors:
+	Copyright (c) 2016 by Germanov Konstantin, antwise.prog@gmail.com
+
+License: 	
+	MIT		
